@@ -225,3 +225,197 @@
 
 // const pawan = bio("Pawan", "Nicholls")
 // console.log(pawan)
+
+
+// loops for, while, do/while
+
+//For loop
+// for(let i=0; i<=10; i++){
+//     console.log(i)
+// }
+
+//while loop
+// let i=0;
+// while(i<= 10){
+//     console.log(i)
+//     i++
+// }
+
+//do while loop
+// let i=0
+// do{
+    
+//     i++
+//     if (i % 2 == 0){
+//         continue 
+//     }
+//     console.log(i)
+// }while(i<=100)
+
+// Data manipulation 
+
+//Number - ParseInt, Float
+//safe number  -2^58 -1 to 2^53 -1
+//NaN => not a number isNaN
+
+// const val = isNaN(5)
+// const val = isNaN("nani")
+// console.log(val)
+
+//Number
+// const num = "5.04w"
+// const val = Number("9876")
+// console.log(typeof(val))
+// const val2 = parseInt(num)
+// const val3 = parseFloat(num)
+// console.log(val2)
+// console.log(val3)
+
+// String
+// const str = "Hi there, My name is Pawan, I live in Nicholls"
+// console.log(str)
+
+// const val =str.length
+//  const val =str.toUpperCase()
+//  const val =str.toLowerCase()
+//  const val =str.indexOf("n")
+//  const val =str.replace("i", "I")
+// const val =str.replaceAll("i", "I")
+// const val =str.substring(4, 8)
+// const val =str.slice(4,8)
+// const val =str.slice(4)
+// const val =str.includes("pawan")
+// const val =str.charAt(6)
+// const val = str.charCodeAt(21)
+// const val = str.split(",")
+// const val =str.search("Pawan")
+// const val =str.search("pawan")
+
+// console.log(val)
+
+// Array
+// const fruits = ["banana", "mango", "apple"]
+// console.log(fruits[1])
+// console.log(fruits[10])
+
+// const data = fruits.length
+// const data = fruits.unshift("watermelon")
+// fruits.unshift("watermelon")
+// const data = fruits.push("mango")
+// fruits.push("mango")
+// const data = fruits.shift()
+// const data = fruits.pop()
+
+// const data = fruits.slice(1,3)
+// const data = fruits.splice(1,3)
+// const data = fruits.splice(1,0, "strawberry")
+// console.log(fruits, data)
+//first value determines first value and 2nd determines number of items.
+
+// console.log(fruits)
+// fruits.sort() // compares only first character
+// fruits.sort((a,b) => a-b) // used in numbers for compiring numbers
+// fruits.reverse()
+// console.log(fruits)
+// console.log(data)
+
+// =======Array lopps
+//  const fruits = ["apple", "banana", "orange", "mango", "mandarin"]
+// forEach
+//   fruits.forEach((item, i) =>{
+//     console.log(item, i)
+//   });
+// forEach loops item
+
+//map
+//   const newArg = fruits.map((item, i) =>{
+//     return "CODE-" + item.toUpperCase();
+//   });
+
+//   console.log(fruits, newArg)
+  // map loops items + helps to reurn same size of array
+
+//filter
+// const newArg = fruits.filter((item,i) =>{
+//     return !(item.includes('m'))
+// });
+
+// filter loops items + helps to reurns array with the true items
+
+// //Find
+// const newArg = fruits.find((item, i)=>{
+//     return item === "orange"
+// })
+// // find loops items and return arrays first matching data
+
+//Every
+// const newArg = fruits.every((item, i) =>{
+//     return item.includes("o")
+// })
+// every loops items and return boolean value
+// console.log(fruits, newArg)
+
+// const balances = [22, 34, 4567, 5678, 6544567, 345676543, 23]
+
+// const total = balances.reduce((subtotal, number) =>{
+//     return subtotal + number;
+// }, 0)
+// //reduce loops items and returns ..
+// console.log(total)
+
+
+// //  Challenge 
+// //1. create an array of 50 random numbers range between 1 and 100 programatically 
+//   const numbers = []
+// for (var i=0; i<50; i++) {
+//     numbers.push(Math.round(Math.random() * 100)+ 1)
+// }
+// console.log(numbers)
+
+
+// //  2. sort the array in descending order
+
+//  sortedNumbers = numbers.sort()
+//  decendingNumbers = sortedNumbers.reverse()
+//  console.log(sortedNumbers)
+
+// //  3. get the total value of the array
+// const total = numbers.reduce((subtotal, number) =>{
+//         return subtotal + number;
+//      }, 0)
+
+//      console.log(total)
+
+// //  4. divide array into odd and even array
+//    const oddArray = numbers.filter((item, i ) =>{
+//      return !(item % 2 === 0)
+//    })
+
+//    const evenArray = numbers.filter((item, i ) =>{
+//     return (item % 2 === 0)
+//   })
+
+//   console.log(oddArray)
+//   console.log(evenArray)
+
+// //  5. remove the duplicate value from the original array 
+
+// const originalNumbers = numbers.filter((item, i)=>{
+//     return numbers.indexOf(item) == i
+// })
+
+// console.log(originalNumbers)
+
+//Challenge2:
+//2. Create an array of 50 random unique numbers range between 1 to 100 programmatically.
+
+
+let uniqueNumbers = []
+ while(uniqueNumbers.length < 50){
+    const number = Math.floor((Math.random() * 100) + 1);
+    if(uniqueNumbers.indexOf(number) === 1){
+        uniqueNumbers.push(number)
+    } 
+ }
+ console.log(uniqueNumbers)
+
